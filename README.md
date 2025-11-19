@@ -72,7 +72,7 @@ Click Generate.
 View or download test cases instantly.
 
 -> SCREENSHORTS:
-<img width="947" height="449" alt="Screenshot 2025-11-19 200151" src="https://github.com/user-attachments/assets/cde6a5ca-0d33-4baf-b8ce-115fb4ce8ed6" />
+<img width="951" height="449" alt="Screenshot 2025-11-19 200045" src="https://github.com/user-attachments/assets/00107b68-e734-4a2c-949d-5929d0b4a65f" />
 <img width="947" height="449" alt="Screenshot 2025-11-19 200151" src="https://github.com/user-attachments/assets/4da544df-64a8-4cac-a789-2b37722b8a14" />
 <img width="947" height="449" alt="Screenshot 2025-11-19 200151" src="https://github.com/user-attachments/assets/123287b9-0885-4b65-86c6-3f2ce8b95989" />
 
