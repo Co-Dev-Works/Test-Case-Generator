@@ -83,19 +83,18 @@ View or download test cases instantly.
 -> PROJECT STRUCTURE:
 
 /project
- ├── app.py
- ├── generator.py
- ├── model.py
- ├── exporter.py
- ├── templates/
- │    ├── index.html
- │    ├── results.html
- │    ╰── dashboard.html
- │    ╰── documentation.html
- └── static/
-      ╰── styles.css
-
-
+  |-app.py
+  |-generator.py
+  |-model.py
+  |exporter.py
+  |-templates/
+      |-index.html
+      |-results.html
+      |-dashboard.html
+      |-documentation.html
+  |-static/
+      |-style.css
+ 
 -> RUN COMMAND:
 
 python app.py
