@@ -1,0 +1,47 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TestCaseGen — AI Test Case Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>TestCaseGen</h1>
+      <nav>
+        <a href="{{ url_for('documentation') }}">Documentation</a>
+      </nav>
+    </header>
+
+    <main class="card hero">
+      <h2>Generate test cases from a requirement</h2>
+      <p class="subtitle">Paste a requirement (SRS-style) and get positive, negative, edge & security testcases.</p>
+
+      {% if error %}
+        <div class="alert">{{ error }}</div>
+      {% endif %}
+
+      <form action="{{ url_for('generate') }}" method="post">
+        <label class="label">Requirement / Feature</label>
+        <textarea name="requirement" placeholder="e.g. The system should allow users to reset their password using a 6-digit email OTP (expires in 5 minutes)." required></textarea>
+
+        <div class="controls">
+          <label class="label small">Number of test cases</label>
+          <select name="num_cases">
+            <option value="6">6</option>
+            <option value="8" selected>8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+          </select>
+          <button class="btn primary" type="submit">Generate</button>
+        </div>
+      </form>
+
+      <footer class="foot">Made with ❤️ • Pastel UI • Flask</footer>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- templates/dashboard.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard — TestCaseGen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>TestCaseGen</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">New</a>
+        <a href="{{ url_for('documentation') }}">Documentation</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h2>Project Dashboard</h2>
+      <p class="req">Latest requirement: “{{ requirement }}”</p>
+
+      <div class="dash-row">
+        <div class="stat">
+          <div class="stat-num">{{ total }}</div>
+          <div class="stat-label">Total Test Cases</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-num">{{ meta.coverage_score }}%</div>
+          <div class="stat-label">Coverage</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-num">{{ dist['High'] }}</div>
+          <div class="stat-label">High Priority</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-num">{{ dist['Medium'] }}</div>
+          <div class="stat-label">Medium Priority</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-num">{{ dist['Low'] }}</div>
+          <div class="stat-label">Low Priority</div>
+        </div>
+      </div>
+
+      <h3>Traceability</h3>
+      <table class="trace">
+        <thead><tr><th>Req</th><th>TC ID</th><th>Title</th></tr></thead>
+        <tbody>
+          {% for tc in cases %}
+          <tr>
+            <td>{{ requirement }}</td>
+            <td>TC{{ '%02d'|format(tc.id) }}</td>
+            <td>{{ tc.title }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </main>
+  </div>
+</body>
+</html>
