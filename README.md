@@ -85,15 +85,16 @@ View or download test cases instantly.
 /project
  ├── app.py
  ├── generator.py
- ├── model.py              
+ ├── model.py
  ├── exporter.py
  ├── templates/
  │    ├── index.html
  │    ├── results.html
- │    ├── dashboard.html
- │    └── documentation.html
+ │    ╰── dashboard.html
+ │    ╰── documentation.html
  └── static/
-      └── styles.css
+      ╰── styles.css
+
 
 -> RUN COMMAND:
 
