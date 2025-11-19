@@ -82,18 +82,7 @@ View or download test cases instantly.
 
 -> PROJECT STRUCTURE:
 
-/project
-  |-app.py
-  |-generator.py
-  |-model.py
-  |exporter.py
-  |-templates/
-      |-index.html
-      |-results.html
-      |-dashboard.html
-      |-documentation.html
-  |-static/
-      |-style.css
+<img width="234" height="210" alt="image" src="https://github.com/user-attachments/assets/8926509f-fad1-4ccc-9134-72226cb30fdf" />
  
 -> RUN COMMAND:
 
