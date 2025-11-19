@@ -1,0 +1,47 @@
+<!-- templates/documentation.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Documentation — TestCaseGen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>TestCaseGen</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">New</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h2>Documentation</h2>
+
+      <h3>What this tool does</h3>
+      <p>Paste a requirement (natural language). The generator classifies the requirement (login, signup, upload, payment, etc.), extracts simple constraints (file size, formats, digits), and produces structured test cases (title, steps, expected, priority, tags).</p>
+
+      <h3>Fields explained</h3>
+      <ul>
+        <li><strong>Title</strong>: short descriptive title of the test case.</li>
+        <li><strong>Steps</strong>: numbered steps to reproduce the test.</li>
+        <li><strong>Expected</strong>: expected result/behavior.</li>
+        <li><strong>Priority</strong>: High / Medium / Low (based on domain & keywords).</li>
+        <li><strong>Tags</strong>: categories like positive, negative, security, validation.</li>
+        <li><strong>Sample data</strong>: generated sample inputs (emails, OTPs, filenames).</li>
+      </ul>
+
+      <h3>Exports</h3>
+      <p>You can download generated test cases as CSV, XLSX, or JSON using the buttons on the results page.</p>
+
+      <h3>Tips</h3>
+      <ul>
+        <li>Add explicit constraints in the requirement (e.g., "up to 5MB", "only JPG/PNG", "6-digit OTP") to get better tailored cases.</li>
+        <li>Use the dashboard to check coverage and priority distribution.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+</html>

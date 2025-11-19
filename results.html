@@ -1,0 +1,17 @@
+
+TestCaseGen
+Dashboard Documentation New
+Generated test cases
+
+“{{ requirement }}”
+{{ meta.coverage_score }}%
+Coverage
+Download CSV Download XLSX Download JSON
+{% if meta.coverage_missing %}
+
+Missing categories: {{ meta.coverage_missing|join(', ') }}
+{% endif %}
+{% for tc in cases %}
+TC{{ '%02d'|format(tc.id) }} {{ tc.title }} {{ tc.priority }}
+
+{% endfor %}
